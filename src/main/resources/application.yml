@@ -1,0 +1,6 @@
+# Configuration of the server
+server:
+  contextPath: /springtestsvc # The context root
+  port: 8992 # The port this service will run on
+
+spring.application.name: svc-spring-test # Need to specifiy the name of the service - this is also used for the log name

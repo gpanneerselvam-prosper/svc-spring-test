@@ -1,0 +1,72 @@
+group 'svc-offer-eligibility'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+            credentials {
+                // The credentials below will be referenced in the installed gradle path (e.g: $USER_HOME/.gradle/gradle.properties)
+                username '$repoUser'
+                password '$repoPassword'
+            }
+            url "https://artifactory.prosper.com/artifactory/platform-local"
+        }
+    }
+    dependencies {
+        // Import the wrapper from above for spring boot gradle goodness
+        classpath("com.prosper.platform:spring-boot-base-gradle:${platformSpringBootVersion}")
+    }
+}
+buildscript.repositories.each { repositories.add(it) }
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'idea' // IntelliJ IDE plugin
+apply plugin: 'spring-boot-base-gradle' // The wrapper spring boot gradle plugin to make sure versions used are correct
+
+dependencies {
+    // Pull in the spring boot base module - this contains everything for a base service
+    compile("com.prosper.platform:spring-boot-base:${platformSpringBootVersion}")
+
+    // Pull in the test module - this contains lots of libraries ans support for testing purposes
+    testCompile("com.prosper.platform:spring-boot-base-test:${platformSpringBootVersion}")
+}
+
+
+// Define a task that will also build a sources jar
+// this is very useful when people download the artifact since it'll contain source code for easier understanding of it's usage
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+// Create the sources.jar archive
+artifacts {
+    archives sourcesJar
+}
+
+test {
+
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: ${descriptor}")
+    }
+
+    afterTest { descriptor, result ->
+        logger.lifecycle("Executed test ${descriptor} with result: ${result.resultType}")
+    }
+
+    testLogging {
+        showStackTraces = true
+        exceptionFormat = "full"
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                "Implementation-Title": "${projectDescription}",
+                "Implementation-Version": version
+        )
+    }
+}
