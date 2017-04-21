@@ -1,5 +1,6 @@
 package com.prosper.springtest.ws;
 
+import com.prosper.platform.springboot.model.dto.PlatformErrorResponseDto;
 import com.prosper.springtest.dto.IntroductionDTO;
 import com.prosper.springtest.model.GreetingResponse;
 import org.springframework.http.MediaType;
@@ -25,10 +26,4 @@ public class TestEndpoint {
         return ResponseEntity.ok("Hello there stranger!");
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/hey")
-    public @ResponseBody GreetingResponse introduce(IntroductionDTO introduction) {
-        LOGGER.info("Into introduce method");
-        LOGGER.info("Introducer: {}", introduction.getName());
-        return new GreetingResponse(introduction.getName());
-    }
 }
