@@ -1,5 +1,6 @@
 package com.prosper.springtest.ws;
 
+import com.prosper.platform.springboot.event.PlatformEventService;
 import com.prosper.platform.springboot.model.dto.PlatformErrorResponseDto;
 import com.prosper.springtest.dto.IntroductionDTO;
 import com.prosper.springtest.exception.GreetingException;
@@ -39,8 +40,10 @@ public class GreetingEndpoint {
     public ResponseEntity<?> badIntroduce(IntroductionDTO introduction){
         try {
             GreetingResponse response = greetingService.greetIntroducers(introduction);
+            PlatformEventService.recordEvent("Introduction Succeeded", introduction.toString() + "caused the introduction service to succeed");
             return ResponseEntity.ok(response);
         } catch(GreetingException ex){
+            PlatformEventService.recordEvent("Introduction Errored", introduction.toString() + "caused the introduction service to error out");
             PlatformErrorResponseDto errorResponseDto = new PlatformErrorResponseDto("bad introduction","Please introduce properly");
             return ResponseEntity.badRequest().body(errorResponseDto);
         }
