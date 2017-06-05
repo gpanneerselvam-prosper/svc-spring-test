@@ -1,0 +1,541 @@
+{
+  "variables": [],
+  "info": {
+    "name": "OfferEligibilitySvc",
+    "_postman_id": "4c0cc36b-c1fb-94d7-0362-85d0c8e7a775",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "4dc2dfcd-67d5-517a-88a7-7ae18f90b88b",
+      "name": "Get Offers - OfferEligibility",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains User ID\"] = _.has(jsonData, \"user_id\");",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": {
+          "raw": "http://np171.c1.dev:8989/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
+          "protocol": "http",
+          "auth": {},
+          "host": [
+            "np171",
+            "c1",
+            "dev"
+          ],
+          "port": "8989",
+          "path": [
+            "offereligibilitysvc",
+            "v1",
+            "offers"
+          ],
+          "query": [
+            {
+              "key": "channel",
+              "value": "secondLoan",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "showAll",
+              "value": "true",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{user_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": "Get Offer eligibility\t\t"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "4afad479-55e1-23b1-5978-ba476b4d70f8",
+      "name": "Get Client Token - offerEligibilitySvc",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Has access Token\"] = responseBody.has(\"access_token\");",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains Access Token\"] = _.has(jsonData, \"access_token\");",
+              "",
+              "postman.clearEnvironmentVariable(\"client_token\");",
+              "postman.setEnvironmentVariable(\"client_token\", jsonData.access_token);",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "http://{{host}}/security/oauth/token",
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "client_id",
+              "value": "prosperOfferEligibilitySvc",
+              "type": "text"
+            },
+            {
+              "key": "client_secret",
+              "value": "8bca03e540d5443aa2ab8254e8410bf3",
+              "type": "text"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text"
+            }
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "a41f76d9-869a-5be0-27b6-cac7adb46916",
+      "name": "Get Client Token - InternalAPI",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Has access Token\"] = responseBody.has(\"access_token\");",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains Access Token\"] = _.has(jsonData, \"access_token\");",
+              "",
+              "postman.clearEnvironmentVariable(\"client_token\");",
+              "postman.setEnvironmentVariable(\"client_token\", jsonData.access_token);",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "http://{{host}}/security/oauth/token",
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "client_id",
+              "value": "internalAPIClient",
+              "type": "text"
+            },
+            {
+              "key": "client_secret",
+              "value": "gTD3zT4Iilm",
+              "type": "text"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text"
+            }
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "56eca09a-76fa-e00a-c697-047605cb48e2",
+      "name": "Get Client Token - prosperPublicSite",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Has access Token\"] = responseBody.has(\"access_token\");",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains Access Token\"] = _.has(jsonData, \"access_token\");",
+              "",
+              "postman.clearEnvironmentVariable(\"client_token\");",
+              "postman.setEnvironmentVariable(\"client_token\", jsonData.access_token);",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "http://{{host}}/security/oauth/token",
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "client_id",
+              "value": "prosperPublicSite",
+              "type": "text"
+            },
+            {
+              "key": "client_secret",
+              "value": "xYuklmasdklop",
+              "type": "text"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text"
+            }
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "4f08c8e6-e86b-f16f-9402-302f65095745",
+      "name": "Get User Token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Has access Token\"] = responseBody.has(\"access_token\");",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains Access Token\"] = _.has(jsonData, \"access_token\");",
+              "",
+              "postman.clearEnvironmentVariable(\"user_token\");",
+              "postman.setEnvironmentVariable(\"user_token\", jsonData.access_token);",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "http://{{host}}/security/oauth/token",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "prosperPublicSite",
+              "type": "text"
+            },
+            {
+              "key": "client_secret",
+              "value": "xYuklmasdklop",
+              "type": "text"
+            },
+            {
+              "key": "grant_type",
+              "value": "password",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "user987659@prosper.stg",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "P@ssword23",
+              "type": "text"
+            }
+          ]
+        },
+        "description": "To get user token"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1d01dabe-fff3-d24f-4e5b-32a760357537",
+      "name": "Get User",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains User Request\"] = _.has(jsonData, \"userRequest\");",
+              "tests[\"Response Contains User\"] = _.has(jsonData.userRequest, \"user\");",
+              "tests[\"Response Contains Personal Info\"] = _.has(jsonData.userRequest.user, \"personal_info\");",
+              "tests[\"Response Contains First Name\"] = _.has(jsonData.userRequest.user.personal_info, \"first_name\");",
+              "tests[\"Response Contains Last Name\"] = _.has(jsonData.userRequest.user.personal_info, \"last_name\");",
+              "tests[\"Response Contains Contact Info\"] = _.has(jsonData.userRequest.user, \"contact_info\");",
+              "tests[\"Response Contains Email\"] = _.has(jsonData.userRequest.user.contact_info, \"email\");",
+              "",
+              "postman.clearEnvironmentVariable(\"user_first_name\");",
+              "postman.setEnvironmentVariable(\"user_first_name\", jsonData.userRequest.user.personal_info.first_name);",
+              "",
+              "postman.clearEnvironmentVariable(\"user_last_name\");",
+              "postman.setEnvironmentVariable(\"user_last_name\", jsonData.userRequest.user.personal_info.last_name);",
+              "",
+              "postman.clearEnvironmentVariable(\"user_email\");",
+              "postman.setEnvironmentVariable(\"user_email\", jsonData.userRequest.user.contact_info.email);",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "http://{{host}}/users",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{user_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": [
+        {
+          "id": "b232e06f-44c0-cb74-004b-1c570645ef51",
+          "name": "test",
+          "originalRequest": {
+            "url": "http://{{host}}/users",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "bearer 35279e83-7a93-41df-ad95-ea0b78690757",
+                "enabled": true,
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "enabled": true,
+                "description": "The mime type of this content",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "enabled": true,
+                "warning": ""
+              }
+            ],
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "_postman_previewtype": "text",
+          "header": [
+            {
+              "name": "Content-Language",
+              "key": "Content-Language",
+              "value": "en-US",
+              "description": ""
+            },
+            {
+              "name": "Content-Type",
+              "key": "Content-Type",
+              "value": "application/json;charset=ISO-8859-1",
+              "description": ""
+            },
+            {
+              "name": "Date",
+              "key": "Date",
+              "value": "Fri, 19 May 2017 22:08:13 GMT",
+              "description": ""
+            },
+            {
+              "name": "Server",
+              "key": "Server",
+              "value": "Apache-Coyote/1.1",
+              "description": ""
+            },
+            {
+              "name": "Transfer-Encoding",
+              "key": "Transfer-Encoding",
+              "value": "chunked",
+              "description": ""
+            },
+            {
+              "name": "X-Correlation-Id",
+              "key": "X-Correlation-Id",
+              "value": "42c17749-252d-4d3a-8727-2f43884c3ce7",
+              "description": ""
+            }
+          ],
+          "cookie": [],
+          "responseTime": "391",
+          "body": "{\"userRequest\":{\"anonymousToken\":true,\"user\":{\"role\":\"BORROWER\",\"is_registration_complete\":false,\"user_id\":987659,\"status\":\"ACTIVE\",\"creation_date\":\"2010-01-12 01:15:00 +0000\",\"identity_verification_code\":\"S\",\"identity_verification_date\":\"2014-02-17 08:00:00 +0000\",\"alt_key\":\"80F83474018216553B05D3A\",\"is_whole_loans_investor\":false,\"ssn\":\"xxx-xx-2742\",\"external_user_id\":\"23451BAD-3D43-468E-A2F2-D9C6EC5112A3\",\"roles\":\"Registered,Borrower,Lender\",\"personal_info\":{\"user_name_type_id\":3,\"first_name\":\"JACQUELINE\",\"last_name\":\"Gregg\",\"date_of_birth\":\"**/**/1993\",\"user_name_type\":\"LEGAL_NAME\",\"user_other_names\":{\"LEGAL_NAME\":\"JACQUELINE Gregg\",\"PREFERRED_NAME\":\"JACQUELINE Gregg\"}},\"address_info\":{\"addressAsString\":\"21515 SATICOY ST CANOGA PARK, CA 91304\",\"address_1\":\"21515 SATICOY ST\",\"city\":\"CANOGA PARK\",\"state\":\"CA\",\"zip_code\":\"91304\",\"address_type_id\":1,\"source_type_id\":1,\"state_of_residence\":\"CA\",\"is_legal_address\":true},\"contact_info\":{\"email\":\"user987659@prosper.stg\",\"phone_numbers\":[{\"country_code\":\"1\",\"area_code\":\"212\",\"phone_number\":\"4642726\",\"phone_type_id\":2,\"preferred_contact\":false,\"visible\":true}]},\"bank_account_info\":[{\"account_id\":44330084,\"bank_name\":\"Bank Of America\",\"first_account_holder_name\":\"JACQUELINE Gregg\",\"routing_number\":\"301301301\",\"account_number\":\"**********853\",\"bank_account_ownership_type\":\"INDIVIDUAL\",\"bank_account_type\":\"CHECKING\",\"withdrawal_type\":\"EFT\",\"is_primary\":true,\"bank_account_status\":2},{\"account_id\":32295034,\"bank_name\":\"North Fork Bank\",\"first_account_holder_name\":\"Francisco Mcelfresh\",\"routing_number\":\"301301301\",\"account_number\":\"*******996\",\"bank_account_ownership_type\":\"INDIVIDUAL\",\"bank_account_type\":\"CHECKING\",\"withdrawal_type\":\"EFT\",\"is_primary\":true,\"bank_account_status\":0}],\"lending_accreditation\":{\"prospectus_reviewed\":true,\"lender_registration_agreement_approved\":true,\"credit_profile_auth\":false,\"terms_of_use\":true,\"consent_to_electronic_disclosures\":true,\"privacy_policies_agreement\":true,\"lending_accreditation_requirement_type_id\":0,\"is_tax_withholding_approved\":true,\"data_terms_of_use\":true,\"provider_info_sharing\":false},\"employment_info\":{\"employer_id\":2044774,\"employer_name\":\"JPMorgan Chase\",\"employment_month\":8,\"employment_year\":2009,\"employment_status_id\":7,\"occupation_id\":40,\"annual_income\":72400.0,\"monthly_income\":6033.333333333333,\"is_self_employed\":false,\"is_income_verifiable\":true},\"credit_grade\":3,\"monthly_debt\":677.0,\"pre_reg_info\":{\"loan_amount\":11000.0}}}}"
+        }
+      ]
+    },
+    {
+      "_postman_id": "ad721c94-8502-d448-48e1-ec4eaa9c231e",
+      "name": "Get Loan Attributes",
+      "request": {
+        "url": "http://{{host}}/offers/loanattributes",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"email_address\": \"user987659@prosper.stg\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "84bb64e5-ea5d-914f-fa75-df18f3e04272",
+      "name": "Find Prospects",
+      "request": {
+        "url": "http://{{host}}/prospects/prospect?offset=0&limit=10&first_name={{user_first_name}}&last_name={{user_last_name}}&email={{user_email}}",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "68f404bc-1e18-9117-9a48-a14ac7ab7643",
+      "name": "Get Draft Offers",
+      "request": {
+        "url": "http://{{host}}/offers/v1/draftoffers",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "User-Id",
+            "value": "5098726",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_type\": \"USER\",\n  \"requested_loan_amount\": 4000,\n  \"loan_purpose_id\": 1,\n  \"credit_range_id\": 4,\n  \"user_annual_income\": 200000,\n  \"user_source_system\": \"PUBLIC_SITE\",\n  \"show_all\": true\n}\n"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "41b52348-a132-0dae-1d7c-411dcc4d1d05",
+      "name": "Get Program",
+      "request": {
+        "url": "http://{{host}}/prospects/program/2D6B0E89-3BCA-4F1A-B80B-D9439B8DB869?campaignId=6E70329B-543C-4726-912E-D394F7B60CAE",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}
