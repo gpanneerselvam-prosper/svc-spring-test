@@ -76,6 +76,72 @@
       "response": []
     },
     {
+      "_postman_id": "11ff06ce-7663-101c-0808-ba39ca0482cc",
+      "name": "Get Offers - OfferEligibility - Local",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains User ID\"] = _.has(jsonData, \"user_id\");",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": {
+          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
+          "protocol": "http",
+          "auth": {},
+          "host": [
+            "localhost"
+          ],
+          "port": "8989",
+          "path": [
+            "offereligibilitysvc",
+            "v1",
+            "offers"
+          ],
+          "query": [
+            {
+              "key": "channel",
+              "value": "secondLoan",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "showAll",
+              "value": "true",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{user_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": "Get Offer eligibility    "
+      },
+      "response": []
+    },
+    {
       "_postman_id": "4afad479-55e1-23b1-5978-ba476b4d70f8",
       "name": "Get Client Token - offerEligibilitySvc",
       "event": [
@@ -534,72 +600,6 @@
         ],
         "body": {},
         "description": ""
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "11ff06ce-7663-101c-0808-ba39ca0482cc",
-      "name": "Get Offers - OfferEligibility - Local",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
-              "var jsonData = JSON.parse(responseBody);",
-              "tests[\"Response Contains User ID\"] = _.has(jsonData, \"user_id\");",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "url": {
-          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
-          "protocol": "http",
-          "auth": {},
-          "host": [
-            "localhost"
-          ],
-          "port": "8989",
-          "path": [
-            "offereligibilitysvc",
-            "v1",
-            "offers"
-          ],
-          "query": [
-            {
-              "key": "channel",
-              "value": "secondLoan",
-              "equals": true,
-              "description": ""
-            },
-            {
-              "key": "showAll",
-              "value": "true",
-              "equals": true,
-              "description": ""
-            }
-          ],
-          "variable": []
-        },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{user_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
-        "description": "Get Offer eligibility    "
       },
       "response": []
     }
