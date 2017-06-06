@@ -539,7 +539,7 @@
     },
     {
       "_postman_id": "11ff06ce-7663-101c-0808-ba39ca0482cc",
-      "name": "Get Offers - OfferEligibility copy",
+      "name": "Get Offers - OfferEligibility - Local",
       "event": [
         {
           "listen": "test",
