@@ -558,7 +558,7 @@
       "name": "Find Prospects - Local",
       "request": {
         "url": {
-          "raw": "http://localhost:8086/prospects/prospect?campaign_program_id=2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
+          "raw": "http://localhost:8086/prospects/prospect?user_id=5101898&campaign_program_id=2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -570,6 +570,12 @@
             "prospect"
           ],
           "query": [
+            {
+              "key": "user_id",
+              "value": "5101898",
+              "equals": true,
+              "description": ""
+            },
             {
               "key": "campaign_program_id",
               "value": "2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
