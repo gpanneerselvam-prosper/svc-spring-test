@@ -550,29 +550,6 @@
       "response": []
     },
     {
-      "_postman_id": "2e727a4a-b50a-e194-2da8-2571141e70bc",
-      "name": "Find Prospects copy",
-      "request": {
-        "url": "http://{{host}}/prospects/prospect?offset=0&limit=10&first_name={{user_first_name}}&last_name={{user_last_name}}&email={{user_email}}",
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{client_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
-        "description": ""
-      },
-      "response": []
-    },
-    {
       "_postman_id": "68f404bc-1e18-9117-9a48-a14ac7ab7643",
       "name": "Get Draft Offers",
       "request": {
@@ -608,6 +585,29 @@
       "name": "Get Program",
       "request": {
         "url": "http://{{host}}/prospects/program/2D6B0E89-3BCA-4F1A-B80B-D9439B8DB869?campaignId=6E70329B-543C-4726-912E-D394F7B60CAE",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "2e727a4a-b50a-e194-2da8-2571141e70bc",
+      "name": "Find Prospects copy",
+      "request": {
+        "url": "http://{{host}}/prospects/prospect?offset=0&limit=10&first_name={{user_first_name}}&last_name={{user_last_name}}&email={{user_email}}",
         "method": "GET",
         "header": [
           {
