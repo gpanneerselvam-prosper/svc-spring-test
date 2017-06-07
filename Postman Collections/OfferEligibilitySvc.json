@@ -551,7 +551,7 @@
     },
     {
       "_postman_id": "2e727a4a-b50a-e194-2da8-2571141e70bc",
-      "name": "Find Prospects - Local",
+      "name": "Find Prospects copy",
       "request": {
         "url": "http://{{host}}/prospects/prospect?offset=0&limit=10&first_name={{user_first_name}}&last_name={{user_last_name}}&email={{user_email}}",
         "method": "GET",
