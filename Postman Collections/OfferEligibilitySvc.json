@@ -558,7 +558,7 @@
       "name": "Find Prospects - Local",
       "request": {
         "url": {
-          "raw": "http://localhost:8086/prospects/prospect?user_id={{user_id}}",
+          "raw": "http://localhost:8086/prospects/prospect?campaign_program_id=2CA6AC5A-92E8-4F37-841C-A38BDE8F3D45",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -571,8 +571,8 @@
           ],
           "query": [
             {
-              "key": "user_id",
-              "value": "{{user_id}}",
+              "key": "campaign_program_id",
+              "value": "2CA6AC5A-92E8-4F37-841C-A38BDE8F3D45",
               "equals": true,
               "description": ""
             }
