@@ -558,7 +558,7 @@
       "name": "Find Prospects - Local",
       "request": {
         "url": {
-          "raw": "http://localhost:8086/prospects/prospect?userId={{user_id}}",
+          "raw": "http://localhost:8086/prospects/prospect?user_id={{user_id}}",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -571,7 +571,7 @@
           ],
           "query": [
             {
-              "key": "userId",
+              "key": "user_id",
               "value": "{{user_id}}",
               "equals": true,
               "description": ""
