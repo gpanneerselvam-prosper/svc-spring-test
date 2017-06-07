@@ -379,11 +379,15 @@
               "var jsonData = JSON.parse(responseBody);",
               "tests[\"Response Contains User Request\"] = _.has(jsonData, \"userRequest\");",
               "tests[\"Response Contains User\"] = _.has(jsonData.userRequest, \"user\");",
+              "tests[\"Response Contains Id\"] = _.has(jsonData.userRequest.user, \"user_id\");",
               "tests[\"Response Contains Personal Info\"] = _.has(jsonData.userRequest.user, \"personal_info\");",
               "tests[\"Response Contains First Name\"] = _.has(jsonData.userRequest.user.personal_info, \"first_name\");",
               "tests[\"Response Contains Last Name\"] = _.has(jsonData.userRequest.user.personal_info, \"last_name\");",
               "tests[\"Response Contains Contact Info\"] = _.has(jsonData.userRequest.user, \"contact_info\");",
               "tests[\"Response Contains Email\"] = _.has(jsonData.userRequest.user.contact_info, \"email\");",
+              "",
+              "postman.clearEnvironmentVariable(\"user_id\");",
+              "postman.setEnvironmentVariable(\"user_id\", jsonData.userRequest.user.user_id);",
               "",
               "postman.clearEnvironmentVariable(\"user_first_name\");",
               "postman.setEnvironmentVariable(\"user_first_name\", jsonData.userRequest.user.personal_info.first_name);",
@@ -554,7 +558,7 @@
       "name": "Find Prospects - Local",
       "request": {
         "url": {
-          "raw": "http://localhost:8086/prospects/prospect?offset=0&limit=10&first_name={{user_first_name}}&last_name={{user_last_name}}&email={{user_email}}",
+          "raw": "http://localhost:8086/prospects/prospect?userId={{user_id}}&campaignProgramId=",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -567,32 +571,14 @@
           ],
           "query": [
             {
-              "key": "offset",
-              "value": "0",
+              "key": "userId",
+              "value": "{{user_id}}",
               "equals": true,
               "description": ""
             },
             {
-              "key": "limit",
-              "value": "10",
-              "equals": true,
-              "description": ""
-            },
-            {
-              "key": "first_name",
-              "value": "{{user_first_name}}",
-              "equals": true,
-              "description": ""
-            },
-            {
-              "key": "last_name",
-              "value": "{{user_last_name}}",
-              "equals": true,
-              "description": ""
-            },
-            {
-              "key": "email",
-              "value": "{{user_email}}",
+              "key": "campaignProgramId",
+              "value": "",
               "equals": true,
               "description": ""
             }
