@@ -534,7 +534,33 @@
       "_postman_id": "84bb64e5-ea5d-914f-fa75-df18f3e04272",
       "name": "Find Prospects",
       "request": {
-        "url": "http://{{host}}/prospects/prospect?",
+        "url": {
+          "raw": "http://{{host}}/prospects/prospect?user_id=5101898&campaign_program_id=2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
+          "protocol": "http",
+          "auth": {},
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "prospects",
+            "prospect"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "5101898",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "campaign_program_id",
+              "value": "2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
         "method": "GET",
         "header": [
           {
