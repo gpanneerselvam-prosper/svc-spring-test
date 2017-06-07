@@ -554,7 +554,7 @@
       "name": "Find Prospects - Local",
       "request": {
         "url": {
-          "raw": "http://localhost:8086/prospects/prospect?userId={{user_id}}&campaignProgramId=",
+          "raw": "http://localhost:8086/prospects/prospect?offset=0&limit=10&first_name={{user_first_name}}&last_name={{user_last_name}}&email={{user_email}}",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -567,14 +567,32 @@
           ],
           "query": [
             {
-              "key": "userId",
-              "value": "{{user_id}}",
+              "key": "offset",
+              "value": "0",
               "equals": true,
               "description": ""
             },
             {
-              "key": "campaignProgramId",
-              "value": "",
+              "key": "limit",
+              "value": "10",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "first_name",
+              "value": "{{user_first_name}}",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "last_name",
+              "value": "{{user_last_name}}",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "email",
+              "value": "{{user_email}}",
               "equals": true,
               "description": ""
             }
