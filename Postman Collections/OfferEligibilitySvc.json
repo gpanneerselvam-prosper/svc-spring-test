@@ -534,7 +534,7 @@
       "_postman_id": "84bb64e5-ea5d-914f-fa75-df18f3e04272",
       "name": "Find Prospects",
       "request": {
-        "url": "http://{{host}}/prospects/prospect?offset=0&limit=10&first_name={{user_first_name}}&last_name={{user_last_name}}&email={{user_email}}",
+        "url": "http://{{host}}/prospects/prospect?",
         "method": "GET",
         "header": [
           {
