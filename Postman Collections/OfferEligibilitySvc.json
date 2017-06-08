@@ -648,7 +648,7 @@
           },
           {
             "key": "User-Id",
-            "value": "987659",
+            "value": "{{user_id}}",
             "description": ""
           }
         ],
