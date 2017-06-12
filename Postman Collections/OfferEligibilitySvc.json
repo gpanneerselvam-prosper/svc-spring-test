@@ -27,12 +27,13 @@
       ],
       "request": {
         "url": {
-          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
+          "raw": "http://{{host}}:8989/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
           "protocol": "http",
           "auth": {},
           "host": [
             "{{host}}"
           ],
+          "port": "8989",
           "path": [
             "offereligibilitysvc",
             "v1",
