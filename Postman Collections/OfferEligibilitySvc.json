@@ -27,15 +27,12 @@
       ],
       "request": {
         "url": {
-          "raw": "http://np171.c1.dev:8989/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
+          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
           "protocol": "http",
           "auth": {},
           "host": [
-            "np171",
-            "c1",
-            "dev"
+            "{{host}}"
           ],
-          "port": "8989",
           "path": [
             "offereligibilitysvc",
             "v1",
