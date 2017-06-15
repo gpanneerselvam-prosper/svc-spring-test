@@ -92,7 +92,7 @@
       ],
       "request": {
         "url": {
-          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
+          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondLoan&show_all=true",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -112,7 +112,7 @@
               "description": ""
             },
             {
-              "key": "showAll",
+              "key": "show_all",
               "value": "true",
               "equals": true,
               "description": ""
