@@ -27,7 +27,7 @@
       ],
       "request": {
         "url": {
-          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondLoan&show_all=true",
+          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -41,7 +41,7 @@
           "query": [
             {
               "key": "channel",
-              "value": "secondLoan",
+              "value": "secondloan",
               "equals": true,
               "description": ""
             },
