@@ -92,11 +92,13 @@
       ],
       "request": {
         "url": {
-          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondLoan&show_all=true",
+          "raw": "http://np171.c1.dev:8989/offereligibilitysvc/v1/offers?channel=directMail&showAll=true",
           "protocol": "http",
           "auth": {},
           "host": [
-            "localhost"
+            "np171",
+            "c1",
+            "dev"
           ],
           "port": "8989",
           "path": [
@@ -107,12 +109,12 @@
           "query": [
             {
               "key": "channel",
-              "value": "secondLoan",
+              "value": "directMail",
               "equals": true,
               "description": ""
             },
             {
-              "key": "show_all",
+              "key": "showAll",
               "value": "true",
               "equals": true,
               "description": ""
