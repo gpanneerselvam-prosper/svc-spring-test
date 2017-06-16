@@ -27,7 +27,7 @@
       ],
       "request": {
         "url": {
-          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondLoan&showAll=true",
+          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondLoan&show_all=true",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -46,7 +46,7 @@
               "description": ""
             },
             {
-              "key": "showAll",
+              "key": "show_all",
               "value": "true",
               "equals": true,
               "description": ""
