@@ -171,7 +171,7 @@
           "formdata": [
             {
               "key": "client_id",
-              "value": "prosperOfferEligibilitySvc",
+              "value": "prosperOfferEligibility",
               "type": "text"
             },
             {
