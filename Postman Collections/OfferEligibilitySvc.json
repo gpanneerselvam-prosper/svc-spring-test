@@ -348,7 +348,7 @@
             },
             {
               "key": "username",
-              "value": "user987659@prosper.stg",
+              "value": "{{user_id}}",
               "type": "text"
             },
             {
