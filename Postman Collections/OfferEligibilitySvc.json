@@ -348,12 +348,12 @@
             },
             {
               "key": "username",
-              "value": "{{user_id}}",
+              "value": "{{user_name}}",
               "type": "text"
             },
             {
               "key": "password",
-              "value": "P@ssword23",
+              "value": "{{user_password}}",
               "type": "text"
             }
           ]
