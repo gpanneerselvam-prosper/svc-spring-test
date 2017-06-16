@@ -92,13 +92,11 @@
       ],
       "request": {
         "url": {
-          "raw": "http://np171.c1.dev:8989/offereligibilitysvc/v1/offers?channel=directMail&showAll=true",
+          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=directMail&showAll=true",
           "protocol": "http",
           "auth": {},
           "host": [
-            "np171",
-            "c1",
-            "dev"
+            "localhost"
           ],
           "port": "8989",
           "path": [
