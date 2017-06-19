@@ -92,8 +92,8 @@
       ],
       "request": {
         "url": {
-          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
-          "protocol": "http",
+          "raw": "https://{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
+          "protocol": "https",
           "auth": {},
           "host": [
             "{{host}}"
