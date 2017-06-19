@@ -398,12 +398,12 @@
           "urlencoded": [
             {
               "key": "client_id",
-              "value": "prosperPublicSite",
+              "value": "{{prosperPublicSite_client_id}}",
               "type": "text"
             },
             {
               "key": "client_secret",
-              "value": "xYuklmasdklop",
+              "value": "{{prosperPublicSite_client_secret}}",
               "type": "text"
             },
             {
