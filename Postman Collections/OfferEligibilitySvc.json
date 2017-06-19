@@ -74,7 +74,7 @@
     },
     {
       "_postman_id": "e084bc07-a9b3-37dd-a458-239160bcff98",
-      "name": "Get Offers - OfferEligibility copy",
+      "name": "Get Offers - OfferEligibility Secure",
       "event": [
         {
           "listen": "test",
