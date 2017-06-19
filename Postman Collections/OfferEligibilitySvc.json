@@ -236,12 +236,12 @@
           "formdata": [
             {
               "key": "client_id",
-              "value": "prosperOfferEligibility",
+              "value": "{{prosperOfferEligibility_client_id}}",
               "type": "text"
             },
             {
               "key": "client_secret",
-              "value": "8bca03e540d5443aa2ab8254e8410bf3",
+              "value": "{{prosperOfferEligibility_client_secret}}",
               "type": "text"
             },
             {
