@@ -401,7 +401,7 @@
         }
       ],
       "request": {
-        "url": "http://{{host}}/users/",
+        "url": "http://{{proxy_host}}/users/",
         "method": "GET",
         "header": [
           {
