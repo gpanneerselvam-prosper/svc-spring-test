@@ -401,7 +401,7 @@
         }
       ],
       "request": {
-        "url": "http://{{host}}/users",
+        "url": "http://{{host}}/users/",
         "method": "GET",
         "header": [
           {
