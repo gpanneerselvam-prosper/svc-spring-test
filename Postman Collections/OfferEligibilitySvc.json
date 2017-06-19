@@ -597,11 +597,11 @@
       "name": "Find Prospects",
       "request": {
         "url": {
-          "raw": "http://{{host}}/prospects/prospect?user_id=5101898&campaign_program_id=2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
+          "raw": "http://{{proxy_host}}/prospects/prospect?user_id=5101898&campaign_program_id=2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
           "protocol": "http",
           "auth": {},
           "host": [
-            "{{host}}"
+            "{{proxy_host}}"
           ],
           "path": [
             "prospects",
