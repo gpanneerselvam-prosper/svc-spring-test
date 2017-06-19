@@ -580,13 +580,13 @@
           },
           {
             "key": "Content-Type",
-            "value": "application/x-www-form-urlencoded",
+            "value": "application/json",
             "description": ""
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email_address\": \"user987659@prosper.stg\"\n}"
+          "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
         "description": ""
       },
