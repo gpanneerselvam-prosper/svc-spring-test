@@ -695,7 +695,7 @@
       "_postman_id": "68f404bc-1e18-9117-9a48-a14ac7ab7643",
       "name": "Get Draft Offers",
       "request": {
-        "url": "http://{{host}}/offers/v1/draftoffers",
+        "url": "http://{{proxy_host}}/offers/v1/draftoffers",
         "method": "POST",
         "header": [
           {
