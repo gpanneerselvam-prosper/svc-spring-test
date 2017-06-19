@@ -205,7 +205,7 @@
     },
     {
       "_postman_id": "4afad479-55e1-23b1-5978-ba476b4d70f8",
-      "name": "Get Client Token - offerEligibilitySvc",
+      "name": "Get Client Token - offerEligibility",
       "event": [
         {
           "listen": "test",
