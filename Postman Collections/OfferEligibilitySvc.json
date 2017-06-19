@@ -157,7 +157,7 @@
       ],
       "request": {
         "url": {
-          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=directMail&show_all=true",
+          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -172,7 +172,7 @@
           "query": [
             {
               "key": "channel",
-              "value": "directMail",
+              "value": "secondloan",
               "equals": true,
               "description": ""
             },
