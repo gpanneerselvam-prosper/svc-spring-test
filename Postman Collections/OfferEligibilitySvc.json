@@ -726,7 +726,28 @@
       "_postman_id": "41b52348-a132-0dae-1d7c-411dcc4d1d05",
       "name": "Get Program",
       "request": {
-        "url": "http://{{host}}/prospects/program/2D6B0E89-3BCA-4F1A-B80B-D9439B8DB869?campaignId=6E70329B-543C-4726-912E-D394F7B60CAE",
+        "url": {
+          "raw": "http://{{proxy_host}}/prospects/program/2D6B0E89-3BCA-4F1A-B80B-D9439B8DB869?campaignId=6E70329B-543C-4726-912E-D394F7B60CAE",
+          "protocol": "http",
+          "auth": {},
+          "host": [
+            "{{proxy_host}}"
+          ],
+          "path": [
+            "prospects",
+            "program",
+            "2D6B0E89-3BCA-4F1A-B80B-D9439B8DB869"
+          ],
+          "query": [
+            {
+              "key": "campaignId",
+              "value": "6E70329B-543C-4726-912E-D394F7B60CAE",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
         "method": "GET",
         "header": [
           {
