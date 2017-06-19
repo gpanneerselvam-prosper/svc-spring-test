@@ -570,7 +570,7 @@
       "_postman_id": "ad721c94-8502-d448-48e1-ec4eaa9c231e",
       "name": "Get Loan Attributes",
       "request": {
-        "url": "http://{{host}}/offers/loanattributes",
+        "url": "http://{{proxy_host}}/offers/loanattributes",
         "method": "POST",
         "header": [
           {
@@ -586,7 +586,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n\t\"email_address\": \"user987659@prosper.stg\"\n}"
+          "raw": "{\n  \"email_address\": \"user65296@prosper.stg\"\n}"
         },
         "description": ""
       },
