@@ -840,6 +840,18 @@
         "description": ""
       },
       "response": []
+    },
+    {
+      "_postman_id": "c815b552-2885-c989-7ea1-61459ff56242",
+      "name": "Get Listings",
+      "request": {
+        "url": "http://{{proxy_host}}/listings/",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
     }
   ]
 }
