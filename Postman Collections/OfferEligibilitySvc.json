@@ -771,13 +771,12 @@
       "name": "Find Program",
       "request": {
         "url": {
-          "raw": "http://localhost:8086/prospects/program/find?channel=DirectMail&campaign_id=6E70329B-543C-4726-912E-D394F7B60CAE",
+          "raw": "http://{{proxy_host}}/prospects/program/find?channel=DirectMail",
           "protocol": "http",
           "auth": {},
           "host": [
-            "localhost"
+            "{{proxy_host}}"
           ],
-          "port": "8086",
           "path": [
             "prospects",
             "program",
@@ -787,12 +786,6 @@
             {
               "key": "channel",
               "value": "DirectMail",
-              "equals": true,
-              "description": ""
-            },
-            {
-              "key": "campaign_id",
-              "value": "6E70329B-543C-4726-912E-D394F7B60CAE",
               "equals": true,
               "description": ""
             }
