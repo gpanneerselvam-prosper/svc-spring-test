@@ -771,7 +771,7 @@
       "name": "Find Program",
       "request": {
         "url": {
-          "raw": "http://localhost:8086/prospects/program/find?channel=DirectMail",
+          "raw": "http://localhost:8086/prospects/program/find?channel=DirectMail&campaign_id=6E70329B-543C-4726-912E-D394F7B60CAE",
           "protocol": "http",
           "auth": {},
           "host": [
@@ -787,6 +787,12 @@
             {
               "key": "channel",
               "value": "DirectMail",
+              "equals": true,
+              "description": ""
+            },
+            {
+              "key": "campaign_id",
+              "value": "6E70329B-543C-4726-912E-D394F7B60CAE",
               "equals": true,
               "description": ""
             }
