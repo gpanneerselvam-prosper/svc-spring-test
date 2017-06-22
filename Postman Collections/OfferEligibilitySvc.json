@@ -868,6 +868,18 @@
         "description": ""
       },
       "response": []
+    },
+    {
+      "_postman_id": "11aa0cd9-3262-b61b-b7f4-5f5797b2e753",
+      "name": "Get UserLoans",
+      "request": {
+        "url": "http://{{proxy_host}}/loans/userloans",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
     }
   ]
 }
