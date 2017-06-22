@@ -814,6 +814,32 @@
         "description": ""
       },
       "response": []
+    },
+    {
+      "_postman_id": "6392cfca-2282-bca3-6b15-66eb1427c5c1",
+      "name": "Get Loan Attributes copy",
+      "request": {
+        "url": "http://{{proxy_host}}/offers/loanattributes",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
+        },
+        "description": ""
+      },
+      "response": []
     }
   ]
 }
