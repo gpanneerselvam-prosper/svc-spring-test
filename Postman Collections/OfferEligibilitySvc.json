@@ -593,6 +593,34 @@
       "response": []
     },
     {
+      "_postman_id": "c815b552-2885-c989-7ea1-61459ff56242",
+      "name": "Get Listings",
+      "request": {
+        "url": "http://{{proxy_host}}/listings/",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{user_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
       "_postman_id": "84bb64e5-ea5d-914f-fa75-df18f3e04272",
       "name": "Find Prospects",
       "request": {
@@ -837,34 +865,6 @@
           "mode": "raw",
           "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
-        "description": ""
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "c815b552-2885-c989-7ea1-61459ff56242",
-      "name": "Get Listings",
-      "request": {
-        "url": "http://{{proxy_host}}/listings/",
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{user_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          },
-          {
-            "key": "Accept",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
         "description": ""
       },
       "response": []
