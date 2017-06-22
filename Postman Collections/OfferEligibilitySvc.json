@@ -765,6 +765,40 @@
         "description": ""
       },
       "response": []
+    },
+    {
+      "_postman_id": "76f09df2-910a-26ed-714f-35f59d8a84ce",
+      "name": "Find Program",
+      "request": {
+        "url": {
+          "raw": "http://localhost:8086/prospects/program/find?channel=DirectMail",
+          "protocol": "http",
+          "auth": {},
+          "host": [
+            "localhost"
+          ],
+          "port": "8086",
+          "path": [
+            "prospects",
+            "program",
+            "find"
+          ],
+          "query": [
+            {
+              "key": "channel",
+              "value": "DirectMail",
+              "equals": true,
+              "description": ""
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
     }
   ]
 }
