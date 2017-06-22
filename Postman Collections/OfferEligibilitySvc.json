@@ -847,7 +847,23 @@
       "request": {
         "url": "http://{{proxy_host}}/listings/",
         "method": "GET",
-        "header": [],
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{user_token}}",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "description": ""
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "description": ""
+          }
+        ],
         "body": {},
         "description": ""
       },
