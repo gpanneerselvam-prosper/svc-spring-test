@@ -621,6 +621,18 @@
       "response": []
     },
     {
+      "_postman_id": "11aa0cd9-3262-b61b-b7f4-5f5797b2e753",
+      "name": "Get UserLoans",
+      "request": {
+        "url": "http://{{proxy_host}}/loans/userloans",
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "description": ""
+      },
+      "response": []
+    },
+    {
       "_postman_id": "84bb64e5-ea5d-914f-fa75-df18f3e04272",
       "name": "Find Prospects",
       "request": {
@@ -865,18 +877,6 @@
           "mode": "raw",
           "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
-        "description": ""
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "11aa0cd9-3262-b61b-b7f4-5f5797b2e753",
-      "name": "Get UserLoans",
-      "request": {
-        "url": "http://{{proxy_host}}/loans/userloans",
-        "method": "GET",
-        "header": [],
-        "body": {},
         "description": ""
       },
       "response": []
