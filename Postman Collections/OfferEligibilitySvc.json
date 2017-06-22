@@ -819,7 +819,7 @@
       "_postman_id": "6392cfca-2282-bca3-6b15-66eb1427c5c1",
       "name": "Get Loan Attributes copy",
       "request": {
-        "url": "http://{{proxy_host}}/offers/loanattributes",
+        "url": "http://localhost:8086/offers/loanattributes",
         "method": "POST",
         "header": [
           {
