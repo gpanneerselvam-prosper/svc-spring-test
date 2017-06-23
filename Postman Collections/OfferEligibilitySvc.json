@@ -1,7 +1,7 @@
 {
   "variables": [],
   "info": {
-    "name": "OfferEligibilitySvc - Old",
+    "name": "OfferEligibilitySvc",
     "_postman_id": "4c0cc36b-c1fb-94d7-0362-85d0c8e7a775",
     "description": "",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
