@@ -428,6 +428,74 @@
       "response": []
     },
     {
+      "_postman_id": "5752719e-0ce4-3849-83c7-7ba9969f6eca",
+      "name": "Get User Token - With Loan and Listing",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Has access Token\"] = responseBody.has(\"access_token\");",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains Access Token\"] = _.has(jsonData, \"access_token\");",
+              "",
+              "postman.clearEnvironmentVariable(\"user_token\");",
+              "postman.setEnvironmentVariable(\"user_token\", jsonData.access_token);",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "url": "http://{{host}}/security/oauth/token",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "{{prosperPublicSite_client_id}}",
+              "type": "text"
+            },
+            {
+              "key": "client_secret",
+              "value": "{{prosperPublicSite_client_secret}}",
+              "type": "text"
+            },
+            {
+              "key": "grant_type",
+              "value": "password",
+              "type": "text"
+            },
+            {
+              "key": "username",
+              "value": "perf_9d1de32213ed47f380d1790e5d8cabd3@c1.dev",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "P@ssword23",
+              "type": "text"
+            }
+          ]
+        },
+        "description": "To get user token"
+      },
+      "response": []
+    },
+    {
       "_postman_id": "1d01dabe-fff3-d24f-4e5b-32a760357537",
       "name": "Get User",
       "event": [
@@ -894,74 +962,6 @@
           "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
         "description": ""
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "5752719e-0ce4-3849-83c7-7ba9969f6eca",
-      "name": "Get User Token - With Loan and Listing",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Has access Token\"] = responseBody.has(\"access_token\");",
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
-              "",
-              "var jsonData = JSON.parse(responseBody);",
-              "tests[\"Response Contains Access Token\"] = _.has(jsonData, \"access_token\");",
-              "",
-              "postman.clearEnvironmentVariable(\"user_token\");",
-              "postman.setEnvironmentVariable(\"user_token\", jsonData.access_token);",
-              "",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "url": "http://{{host}}/security/oauth/token",
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/x-www-form-urlencoded",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "urlencoded",
-          "urlencoded": [
-            {
-              "key": "client_id",
-              "value": "{{prosperPublicSite_client_id}}",
-              "type": "text"
-            },
-            {
-              "key": "client_secret",
-              "value": "{{prosperPublicSite_client_secret}}",
-              "type": "text"
-            },
-            {
-              "key": "grant_type",
-              "value": "password",
-              "type": "text"
-            },
-            {
-              "key": "username",
-              "value": "perf_9d1de32213ed47f380d1790e5d8cabd3@c1.dev",
-              "type": "text"
-            },
-            {
-              "key": "password",
-              "value": "P@ssword23",
-              "type": "text"
-            }
-          ]
-        },
-        "description": "To get user token"
       },
       "response": []
     }
