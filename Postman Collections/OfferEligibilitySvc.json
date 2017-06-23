@@ -661,10 +661,10 @@
       "response": []
     },
     {
-      "_postman_id": "c815b552-2885-c989-7ea1-61459ff56242",
-      "name": "Get Listings",
+      "_postman_id": "11aa0cd9-3262-b61b-b7f4-5f5797b2e753",
+      "name": "Get UserLoans",
       "request": {
-        "url": "http://{{proxy_host}}/listings/",
+        "url": "http://{{proxy_host}}/loans/userloans",
         "method": "GET",
         "header": [
           {
@@ -689,10 +689,10 @@
       "response": []
     },
     {
-      "_postman_id": "11aa0cd9-3262-b61b-b7f4-5f5797b2e753",
-      "name": "Get UserLoans",
+      "_postman_id": "c815b552-2885-c989-7ea1-61459ff56242",
+      "name": "Get Listings",
       "request": {
-        "url": "http://{{proxy_host}}/loans/userloans",
+        "url": "http://{{proxy_host}}/listings/",
         "method": "GET",
         "header": [
           {
