@@ -1,5 +1,4 @@
 {
-  "variables": [],
   "info": {
     "name": "OfferEligibilitySvc",
     "_postman_id": "4c0cc36b-c1fb-94d7-0362-85d0c8e7a775",
@@ -26,10 +25,21 @@
         }
       ],
       "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{user_token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {},
         "url": {
-          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
-          "protocol": "http",
-          "auth": {},
+          "raw": "https://{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
+          "protocol": "https",
           "host": [
             "{{host}}"
           ],
@@ -41,33 +51,14 @@
           "query": [
             {
               "key": "channel",
-              "value": "secondloan",
-              "equals": true,
-              "description": ""
+              "value": "secondloan"
             },
             {
               "key": "show_all",
-              "value": "true",
-              "equals": true,
-              "description": ""
+              "value": "true"
             }
-          ],
-          "variable": []
+          ]
         },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{user_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
         "description": "Get Offer eligibility\t\t"
       },
       "response": []
@@ -91,10 +82,21 @@
         }
       ],
       "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{user_token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {},
         "url": {
           "raw": "https://{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
           "protocol": "https",
-          "auth": {},
           "host": [
             "{{host}}"
           ],
@@ -107,32 +109,15 @@
             {
               "key": "channel",
               "value": "secondloan",
-              "equals": true,
-              "description": ""
+              "equals": true
             },
             {
               "key": "show_all",
               "value": "true",
-              "equals": true,
-              "description": ""
+              "equals": true
             }
-          ],
-          "variable": []
+          ]
         },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{user_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
         "description": "Get Offer eligibility    "
       },
       "response": []
@@ -156,10 +141,21 @@
         }
       ],
       "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{user_token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {},
         "url": {
           "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
           "protocol": "http",
-          "auth": {},
           "host": [
             "localhost"
           ],
@@ -173,32 +169,15 @@
             {
               "key": "channel",
               "value": "secondloan",
-              "equals": true,
-              "description": ""
+              "equals": true
             },
             {
               "key": "show_all",
               "value": "true",
-              "equals": true,
-              "description": ""
+              "equals": true
             }
-          ],
-          "variable": []
+          ]
         },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{user_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
         "description": "Get Offer eligibility    "
       },
       "response": []
@@ -228,7 +207,6 @@
         }
       ],
       "request": {
-        "url": "http://{{host}}/security/oauth/token",
         "method": "POST",
         "header": [],
         "body": {
@@ -251,6 +229,7 @@
             }
           ]
         },
+        "url": "http://{{host}}/security/oauth/token",
         "description": ""
       },
       "response": []
@@ -280,7 +259,6 @@
         }
       ],
       "request": {
-        "url": "http://{{host}}/security/oauth/token",
         "method": "POST",
         "header": [],
         "body": {
@@ -303,6 +281,7 @@
             }
           ]
         },
+        "url": "http://{{host}}/security/oauth/token",
         "description": ""
       },
       "response": []
@@ -332,7 +311,6 @@
         }
       ],
       "request": {
-        "url": "http://{{host}}/security/oauth/token",
         "method": "POST",
         "header": [],
         "body": {
@@ -355,6 +333,7 @@
             }
           ]
         },
+        "url": "http://{{host}}/security/oauth/token",
         "description": ""
       },
       "response": []
@@ -384,13 +363,11 @@
         }
       ],
       "request": {
-        "url": "http://{{host}}/security/oauth/token",
         "method": "POST",
         "header": [
           {
             "key": "Content-Type",
-            "value": "application/x-www-form-urlencoded",
-            "description": ""
+            "value": "application/x-www-form-urlencoded"
           }
         ],
         "body": {
@@ -423,6 +400,7 @@
             }
           ]
         },
+        "url": "http://{{host}}/security/oauth/token",
         "description": "To get user token"
       },
       "response": []
@@ -452,13 +430,11 @@
         }
       ],
       "request": {
-        "url": "http://{{host}}/security/oauth/token",
         "method": "POST",
         "header": [
           {
             "key": "Content-Type",
-            "value": "application/x-www-form-urlencoded",
-            "description": ""
+            "value": "application/x-www-form-urlencoded"
           }
         ],
         "body": {
@@ -491,6 +467,7 @@
             }
           ]
         },
+        "url": "http://{{host}}/security/oauth/token",
         "description": "To get user token"
       },
       "response": []
@@ -534,26 +511,23 @@
         }
       ],
       "request": {
-        "url": "http://{{proxy_host}}/users/",
         "method": "GET",
         "header": [
           {
             "key": "Authorization",
-            "value": "bearer {{user_token}}",
-            "description": ""
+            "value": "bearer {{user_token}}"
           },
           {
             "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           },
           {
             "key": "Accept",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           }
         ],
         "body": {},
+        "url": "http://{{proxy_host}}/users/",
         "description": ""
       },
       "response": [
@@ -561,7 +535,6 @@
           "id": "b232e06f-44c0-cb74-004b-1c570645ef51",
           "name": "test",
           "originalRequest": {
-            "url": "http://{{host}}/users",
             "method": "GET",
             "header": [
               {
@@ -584,12 +557,12 @@
                 "warning": ""
               }
             ],
-            "body": {}
+            "body": {},
+            "url": "http://{{host}}/users"
           },
           "status": "OK",
           "code": 200,
           "_postman_previewlanguage": "json",
-          "_postman_previewtype": "text",
           "header": [
             {
               "name": "Content-Language",
@@ -638,24 +611,22 @@
       "_postman_id": "ad721c94-8502-d448-48e1-ec4eaa9c231e",
       "name": "Get Loan Attributes",
       "request": {
-        "url": "http://{{proxy_host}}/offers/loanattributes",
         "method": "POST",
         "header": [
           {
             "key": "Authorization",
-            "value": "bearer {{client_token}}",
-            "description": ""
+            "value": "bearer {{client_token}}"
           },
           {
             "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           }
         ],
         "body": {
           "mode": "raw",
           "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
+        "url": "http://{{proxy_host}}/offers/loanattributes",
         "description": ""
       },
       "response": []
@@ -664,26 +635,23 @@
       "_postman_id": "11aa0cd9-3262-b61b-b7f4-5f5797b2e753",
       "name": "Get UserLoans",
       "request": {
-        "url": "http://{{proxy_host}}/loans/userloans",
         "method": "GET",
         "header": [
           {
             "key": "Authorization",
-            "value": "bearer {{user_token}}",
-            "description": ""
+            "value": "bearer {{user_token}}"
           },
           {
             "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           },
           {
             "key": "Accept",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           }
         ],
         "body": {},
+        "url": "http://{{proxy_host}}/loans/userloans",
         "description": ""
       },
       "response": []
@@ -692,26 +660,23 @@
       "_postman_id": "c815b552-2885-c989-7ea1-61459ff56242",
       "name": "Get Listings",
       "request": {
-        "url": "http://{{proxy_host}}/listings/",
         "method": "GET",
         "header": [
           {
             "key": "Authorization",
-            "value": "bearer {{user_token}}",
-            "description": ""
+            "value": "bearer {{user_token}}"
           },
           {
             "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           },
           {
             "key": "Accept",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           }
         ],
         "body": {},
+        "url": "http://{{proxy_host}}/listings/",
         "description": ""
       },
       "response": []
@@ -720,10 +685,21 @@
       "_postman_id": "84bb64e5-ea5d-914f-fa75-df18f3e04272",
       "name": "Find Prospects",
       "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {},
         "url": {
           "raw": "http://{{proxy_host}}/prospects/prospect?user_id=5101898&campaign_program_id=2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
           "protocol": "http",
-          "auth": {},
           "host": [
             "{{proxy_host}}"
           ],
@@ -735,32 +711,15 @@
             {
               "key": "user_id",
               "value": "5101898",
-              "equals": true,
-              "description": ""
+              "equals": true
             },
             {
               "key": "campaign_program_id",
               "value": "2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
-              "equals": true,
-              "description": ""
+              "equals": true
             }
-          ],
-          "variable": []
+          ]
         },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{client_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
         "description": ""
       },
       "response": []
@@ -769,10 +728,21 @@
       "_postman_id": "2e727a4a-b50a-e194-2da8-2571141e70bc",
       "name": "Find Prospects - Local",
       "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {},
         "url": {
           "raw": "http://localhost:8086/prospects/prospect?user_id=5101898&campaign_program_id=2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
           "protocol": "http",
-          "auth": {},
           "host": [
             "localhost"
           ],
@@ -785,32 +755,15 @@
             {
               "key": "user_id",
               "value": "5101898",
-              "equals": true,
-              "description": ""
+              "equals": true
             },
             {
               "key": "campaign_program_id",
               "value": "2AA70EF2-34F3-4BDC-8234-3D5DA20FAF8B",
-              "equals": true,
-              "description": ""
+              "equals": true
             }
-          ],
-          "variable": []
+          ]
         },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{client_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
         "description": ""
       },
       "response": []
@@ -819,29 +772,26 @@
       "_postman_id": "68f404bc-1e18-9117-9a48-a14ac7ab7643",
       "name": "Get Draft Offers",
       "request": {
-        "url": "http://{{proxy_host}}/offers/v1/draftoffers",
         "method": "POST",
         "header": [
           {
             "key": "Authorization",
-            "value": "bearer {{client_token}}",
-            "description": ""
+            "value": "bearer {{client_token}}"
           },
           {
             "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           },
           {
             "key": "User-Id",
-            "value": "{{user_id}}",
-            "description": ""
+            "value": "{{user_id}}"
           }
         ],
         "body": {
           "mode": "raw",
           "raw": "{\n  \"user_type\": \"USER\",\n  \"requested_loan_amount\": 4000,\n  \"loan_purpose_id\": 1,\n  \"credit_range_id\": 4,\n  \"user_annual_income\": 200000,\n  \"user_source_system\": \"PUBLIC_SITE\",\n  \"show_all\": true\n}\n"
         },
+        "url": "http://{{proxy_host}}/offers/v1/draftoffers",
         "description": ""
       },
       "response": []
@@ -850,10 +800,21 @@
       "_postman_id": "41b52348-a132-0dae-1d7c-411dcc4d1d05",
       "name": "Get Program",
       "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {},
         "url": {
           "raw": "http://{{proxy_host}}/prospects/program/2D6B0E89-3BCA-4F1A-B80B-D9439B8DB869?campaignId=6E70329B-543C-4726-912E-D394F7B60CAE",
           "protocol": "http",
-          "auth": {},
           "host": [
             "{{proxy_host}}"
           ],
@@ -866,26 +827,10 @@
             {
               "key": "campaignId",
               "value": "6E70329B-543C-4726-912E-D394F7B60CAE",
-              "equals": true,
-              "description": ""
+              "equals": true
             }
-          ],
-          "variable": []
+          ]
         },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{client_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
         "description": ""
       },
       "response": []
@@ -894,10 +839,25 @@
       "_postman_id": "76f09df2-910a-26ed-714f-35f59d8a84ce",
       "name": "Find Program",
       "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "bearer {{client_token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {},
         "url": {
           "raw": "http://{{proxy_host}}/prospects/program/find?channel=DirectMail",
           "protocol": "http",
-          "auth": {},
           "host": [
             "{{proxy_host}}"
           ],
@@ -910,31 +870,10 @@
             {
               "key": "channel",
               "value": "DirectMail",
-              "equals": true,
-              "description": ""
+              "equals": true
             }
-          ],
-          "variable": []
+          ]
         },
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{client_token}}",
-            "description": ""
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          },
-          {
-            "key": "Accept",
-            "value": "application/json",
-            "description": ""
-          }
-        ],
-        "body": {},
         "description": ""
       },
       "response": []
@@ -943,24 +882,22 @@
       "_postman_id": "6392cfca-2282-bca3-6b15-66eb1427c5c1",
       "name": "Get Loan Attributes copy",
       "request": {
-        "url": "http://localhost:8086/offers/loanattributes",
         "method": "POST",
         "header": [
           {
             "key": "Authorization",
-            "value": "bearer {{client_token}}",
-            "description": ""
+            "value": "bearer {{client_token}}"
           },
           {
             "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
+            "value": "application/json"
           }
         ],
         "body": {
           "mode": "raw",
           "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
+        "url": "http://localhost:8086/offers/loanattributes",
         "description": ""
       },
       "response": []
