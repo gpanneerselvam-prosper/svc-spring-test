@@ -38,8 +38,8 @@
         ],
         "body": {},
         "url": {
-          "raw": "https://{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
-          "protocol": "https",
+          "raw": "http://{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
+          "protocol": "http",
           "host": [
             "{{host}}"
           ],
