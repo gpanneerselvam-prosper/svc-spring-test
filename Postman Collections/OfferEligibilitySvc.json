@@ -1,8 +1,7 @@
 {
   "info": {
-    "name": "OfferEligibilitySvc",
     "_postman_id": "4c0cc36b-c1fb-94d7-0362-85d0c8e7a775",
-    "description": "",
+    "name": "OfferEligibilitySvc",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -123,66 +122,6 @@
       "response": []
     },
     {
-      "_postman_id": "11ff06ce-7663-101c-0808-ba39ca0482cc",
-      "name": "Get Offers - OfferEligibility - Local",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "tests[\"Status code is 200\"] = responseCode.code === 200;",
-              "",
-              "var jsonData = JSON.parse(responseBody);",
-              "tests[\"Response Contains User ID\"] = _.has(jsonData, \"user_id\");",
-              ""
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "bearer {{user_token}}"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/json"
-          }
-        ],
-        "body": {},
-        "url": {
-          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "8989",
-          "path": [
-            "offereligibilitysvc",
-            "v1",
-            "offers"
-          ],
-          "query": [
-            {
-              "key": "channel",
-              "value": "secondloan",
-              "equals": true
-            },
-            {
-              "key": "show_all",
-              "value": "true",
-              "equals": true
-            }
-          ]
-        },
-        "description": "Get Offer eligibility    "
-      },
-      "response": []
-    },
-    {
       "_postman_id": "4afad479-55e1-23b1-5978-ba476b4d70f8",
       "name": "Get Client Token - prosperOfferEligibility",
       "event": [
@@ -229,8 +168,7 @@
             }
           ]
         },
-        "url": "http://{{host}}/security/oauth/token",
-        "description": ""
+        "url": "http://{{host}}/security/oauth/token"
       },
       "response": []
     },
@@ -281,8 +219,7 @@
             }
           ]
         },
-        "url": "http://{{host}}/security/oauth/token",
-        "description": ""
+        "url": "http://{{host}}/security/oauth/token"
       },
       "response": []
     },
@@ -333,8 +270,7 @@
             }
           ]
         },
-        "url": "http://{{host}}/security/oauth/token",
-        "description": ""
+        "url": "http://{{host}}/security/oauth/token"
       },
       "response": []
     },
@@ -527,8 +463,7 @@
           }
         ],
         "body": {},
-        "url": "http://{{proxy_host}}/users/",
-        "description": ""
+        "url": "http://{{proxy_host}}/users/"
       },
       "response": [
         {
@@ -626,8 +561,7 @@
           "mode": "raw",
           "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
-        "url": "http://{{proxy_host}}/offers/loanattributes",
-        "description": ""
+        "url": "http://{{proxy_host}}/offers/loanattributes"
       },
       "response": []
     },
@@ -651,8 +585,7 @@
           }
         ],
         "body": {},
-        "url": "http://{{proxy_host}}/loans/userloans",
-        "description": ""
+        "url": "http://{{proxy_host}}/loans/userloans"
       },
       "response": []
     },
@@ -676,8 +609,7 @@
           }
         ],
         "body": {},
-        "url": "http://{{proxy_host}}/listings/",
-        "description": ""
+        "url": "http://{{proxy_host}}/listings/"
       },
       "response": []
     },
@@ -719,8 +651,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -763,8 +694,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -791,8 +721,7 @@
           "mode": "raw",
           "raw": "{\n  \"user_type\": \"USER\",\n  \"requested_loan_amount\": 4000,\n  \"loan_purpose_id\": 1,\n  \"credit_range_id\": 4,\n  \"user_annual_income\": 200000,\n  \"user_source_system\": \"PUBLIC_SITE\",\n  \"show_all\": true\n}\n"
         },
-        "url": "http://{{proxy_host}}/offers/v1/draftoffers",
-        "description": ""
+        "url": "http://{{proxy_host}}/offers/v1/draftoffers"
       },
       "response": []
     },
@@ -830,8 +759,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -873,8 +801,7 @@
               "equals": true
             }
           ]
-        },
-        "description": ""
+        }
       },
       "response": []
     },
@@ -897,8 +824,7 @@
           "mode": "raw",
           "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
-        "url": "http://localhost:8086/offers/loanattributes",
-        "description": ""
+        "url": "http://localhost:8086/offers/loanattributes"
       },
       "response": []
     }
