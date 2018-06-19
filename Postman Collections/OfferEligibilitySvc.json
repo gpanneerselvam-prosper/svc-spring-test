@@ -527,7 +527,7 @@
           }
         ],
         "body": {},
-        "url": "http://{{proxy_host}}/loans/userloans"
+        "url": "{{proxy_protocol}}{{proxy_host}}/loans/userloans"
       },
       "response": []
     },
