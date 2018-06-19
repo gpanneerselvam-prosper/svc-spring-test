@@ -405,7 +405,7 @@
           }
         ],
         "body": {},
-        "url": "http://{{proxy_host}}/users/"
+        "url": "{{proxy_protocol}}{{proxy_host}}/users/"
       },
       "response": [
         {
