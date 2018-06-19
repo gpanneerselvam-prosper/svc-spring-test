@@ -662,7 +662,7 @@
           "mode": "raw",
           "raw": "{\n  \"user_type\": \"USER\",\n  \"requested_loan_amount\": 4000,\n  \"loan_purpose_id\": 1,\n  \"credit_range_id\": 4,\n  \"user_annual_income\": 200000,\n  \"user_source_system\": \"PUBLIC_SITE\",\n  \"show_all\": true\n}\n"
         },
-        "url": "http://{{proxy_host}}/offers/v1/draftoffers"
+        "url": "{{proxy_protocol}}{{proxy_host}}/offers/v1/draftoffers"
       },
       "response": []
     },
