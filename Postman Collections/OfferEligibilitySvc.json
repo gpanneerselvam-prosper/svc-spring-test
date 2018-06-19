@@ -278,7 +278,7 @@
             }
           ]
         },
-        "url": "http://{{host}}/security/oauth/token",
+        "url": "{{protocol}}{{host}}/security/oauth/token",
         "description": "To get user token"
       },
       "response": []
