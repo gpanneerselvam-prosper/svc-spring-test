@@ -503,7 +503,7 @@
           "mode": "raw",
           "raw": "{\n  \"email_address\": \"{{user_email}}\"\n}"
         },
-        "url": "{{proxy_host}}/offers/loanattributes"
+        "url": "{{proxy_protocol}}{{proxy_host}}/offers/loanattributes"
       },
       "response": []
     },
