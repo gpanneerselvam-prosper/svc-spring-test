@@ -724,10 +724,9 @@
         ],
         "body": {},
         "url": {
-          "raw": "http://{{proxy_host}}/prospects/program/find?channel=DirectMail",
-          "protocol": "http",
+          "raw": "{{proxy_protocol}}{{proxy_host}}/prospects/program/find?channel=DirectMail",
           "host": [
-            "{{proxy_host}}"
+            "{{proxy_protocol}}{{proxy_host}}"
           ],
           "path": [
             "prospects",
