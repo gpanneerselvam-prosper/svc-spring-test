@@ -551,7 +551,7 @@
           }
         ],
         "body": {},
-        "url": "{{proxy_protocol}}{{proxy_host}}/listings/"
+        "url": "{{proxy_host}}/listings/"
       },
       "response": []
     },
