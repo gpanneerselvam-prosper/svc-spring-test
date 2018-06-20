@@ -683,9 +683,9 @@
         ],
         "body": {},
         "url": {
-          "raw": "{{proxy_protocol}}{{proxy_host}}/prospects/program/2D6B0E89-3BCA-4F1A-B80B-D9439B8DB869?campaignId=6E70329B-543C-4726-912E-D394F7B60CAE",
+          "raw": "{{proxy_host}}/prospects/program/2D6B0E89-3BCA-4F1A-B80B-D9439B8DB869?campaignId=6E70329B-543C-4726-912E-D394F7B60CAE",
           "host": [
-            "{{proxy_protocol}}{{proxy_host}}"
+            "{{proxy_host}}"
           ],
           "path": [
             "prospects",
