@@ -12,14 +12,15 @@
         {
           "listen": "test",
           "script": {
-            "type": "text/javascript",
+            "id": "73cb93bc-6b4d-4b8a-be76-58a4fab71fbc",
             "exec": [
               "tests[\"Status code is 200\"] = responseCode.code === 200;",
               "",
               "var jsonData = JSON.parse(responseBody);",
               "tests[\"Response Contains User ID\"] = _.has(jsonData, \"user_id\");",
               ""
-            ]
+            ],
+            "type": "text/javascript"
           }
         }
       ],
@@ -35,12 +36,17 @@
             "value": "application/json"
           }
         ],
-        "body": {},
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
         "url": {
-          "raw": "{{protocol}}{{host}}/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true",
+          "raw": "http://localhost:8989/offereligibilitysvc/v1/offers?channel=secondloan&show_all=true&version=B",
+          "protocol": "http",
           "host": [
-            "{{protocol}}{{host}}"
+            "localhost"
           ],
+          "port": "8989",
           "path": [
             "offereligibilitysvc",
             "v1",
@@ -55,6 +61,11 @@
             {
               "key": "show_all",
               "value": "true",
+              "equals": true
+            },
+            {
+              "key": "version",
+              "value": "B",
               "equals": true
             }
           ]
