@@ -126,6 +126,57 @@
       "response": []
     },
     {
+      "_postman_id": "b61263d6-d006-451d-82ec-22d298d9a246",
+      "name": "Get Client Token - prosperOfferEligibility Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Has access Token\"] = responseBody.has(\"access_token\");",
+              "tests[\"Status code is 200\"] = responseCode.code === 200;",
+              "",
+              "",
+              "var jsonData = JSON.parse(responseBody);",
+              "tests[\"Response Contains Access Token\"] = _.has(jsonData, \"access_token\");",
+              "",
+              "postman.clearEnvironmentVariable(\"client_token\");",
+              "postman.setEnvironmentVariable(\"client_token\", jsonData.access_token);",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "client_id",
+              "value": "{{prosperOfferEligibility_client_id}}",
+              "type": "text"
+            },
+            {
+              "key": "client_secret",
+              "value": "{{prosperOfferEligibility_client_secret}}",
+              "type": "text"
+            },
+            {
+              "key": "grant_type",
+              "value": "client_credentials",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "{{protocol}}{{host}}/security/oauth/token"
+      },
+      "response": []
+    },
+    {
       "_postman_id": "a41f76d9-869a-5be0-27b6-cac7adb46916",
       "name": "Get Client Token - InternalAPI",
       "event": [
